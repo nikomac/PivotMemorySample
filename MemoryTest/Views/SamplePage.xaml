@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="MemoryTest.Views.SamplePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button 
+                Grid.Row="0"
+                Content="Close"
+                Margin="10"
+                HorizontalAlignment="Right"
+                Command="{Binding CloseCommand, Mode=OneWay}"
+                />
+        
+        <StackPanel
+            Grid.Row="1"
+            Width="400"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center">
+            <TextBox
+                Header="Name" />
+
+            <TextBox
+                Header="Key"/>
+
+            <TextBox
+                Header="Notes"
+                AcceptsReturn="True"/>
+
+            <TextBox
+                Header="Name"/>
+
+            <TextBox
+                Header="Key"/>
+
+            <TextBox
+                Header="Notes"
+                AcceptsReturn="True"/>
+        </StackPanel>
+    </Grid>
+</Page>
